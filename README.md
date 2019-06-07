@@ -80,6 +80,6 @@ meetup, workshop or Hackathon where RL practitioners can participate to this cha
 # Bonus: Example Implementation
 PyTorch implementation of Multi-processed training of a shared model where batches
 
-are divided across processes. Looking for a person to contribute a TensorFlow version,
+are divided across processes. Looking for a person to contribute a TensorFlow version.
 
-as well as an Open AI Gym environment to realistically simulate live-trading conditions.
+Multi-threaded implemenation of Augmented Random Search technique is also available!
