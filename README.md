@@ -84,4 +84,4 @@ are divided across processes. Looking for a person to contribute a TensorFlow ve
 
 Multi-threaded implementation of Augmented Random Search method is also available!
 
-Run the GPU version and then post-train it with the CPU version (ARS) to get best results.
+Run the GPU version and then post-train with the CPU version (ARS) to get best results.
