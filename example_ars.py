@@ -168,11 +168,10 @@ if __name__ == '__main__':
         STEP_SIZE *= 0.995
         print('Step size decreased to {}'.format(STEP_SIZE))
 
-        plot_function(epoch_weights)
-
         if test_reward > best_reward: continue
         best_reward = test_reward
 
         weight_names = root+'models/policy_weights'
         np.save(weight_names, n_policy.numpy()) 
-        #plot_function(epoch_weights)
+        plot_function(epoch_weights)
+
