@@ -131,7 +131,6 @@ class ARSModel():
         self.feats = numFeatures
         self.chnls = NumChannels
         self.weights = torch.zeros(self.feats, self.chnls+1).to('cpu')
-        #self.weights[:512,:] = torch.Tensor(preload.T)[:,:12]
         self.weights[:,:] = torch.Tensor(preload.T)[:,:self.chnls+1]
         self.numDeltas = 36
         self.std = 0.5
@@ -151,10 +150,15 @@ if __name__ == '__main__':
 
     with open(root+'models/weights.pkl', 'rb') as f: weights = cPickle.load(f)
     model = ARSModel(No_Features, No_Channels, weights)
+    _, _, epoch_weights = calculate_reward(model, test_loader, No_Proccess+1, risk=True)
+    plot_function(epoch_weights)
+
+    exit()
     for epoch in range(epochs):
         start_time = time.time()
         n_policy = train(model, 0)
-        total_reward, pos_reward, epoch_weights = calculate_reward(model, test_loader, No_Proccess+1, risk=True, policy=n_policy, plot = True)
+        total_reward, pos_reward, epoch_weights = calculate_reward(
+            model, test_loader, No_Proccess+1, risk=True, policy=n_policy)
         test_reward = pos_reward / total_reward
         model.weights = n_policy
 
@@ -174,4 +178,3 @@ if __name__ == '__main__':
         weight_names = root+'models/policy_weights'
         np.save(weight_names, n_policy.numpy()) 
         plot_function(epoch_weights)
-
