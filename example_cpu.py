@@ -150,10 +150,9 @@ if __name__ == '__main__':
 
     with open(root+'models/weights.pkl', 'rb') as f: weights = cPickle.load(f)
     model = ARSModel(No_Features, No_Channels, weights)
-    _, _, epoch_weights = calculate_reward(model, test_loader, No_Proccess+1, risk=True)
-    plot_function(epoch_weights)
+    #_, _, epoch_weights = calculate_reward(model, test_loader, No_Proccess+1, risk=True)
+    #plot_function(epoch_weights)
 
-    exit()
     for epoch in range(epochs):
         start_time = time.time()
         n_policy = train(model, 0)
