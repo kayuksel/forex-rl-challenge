@@ -82,6 +82,6 @@ PyTorch implementation of Multi-processed training of a shared model where batch
 
 are divided across processes. Looking for a person to contribute a TensorFlow version.
 
-Multi-threaded implemenation of Augmented Random Search method is also available!
+Multi-threaded implementation of Augmented Random Search method is also available!
 
-Run the GPU version and then post-train it with the CPU version to get best results.
+Run the GPU version and then post-train it with the CPU version (ARS) to get best results.
