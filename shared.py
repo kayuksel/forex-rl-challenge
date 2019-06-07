@@ -10,6 +10,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
+from adamw import AdamW
 from torchvision import datasets
 import os, time, pdb, math, random
 import _pickle as cPickle
@@ -71,7 +72,7 @@ def plot_function(epoch_weights):
     print(ttt)
     plt.figure()
     np.exp(ret).cumprod().plot(figsize=(48, 12), title=ttt)
-    plt.savefig(root+'graphs/cumulative_return')
+    plt.savefig(root+'graphs/cumulative_return', bbox_inches='tight', pad_inches=0)
     plt.close()
     ret = ret.resample('1W').sum()
     plt.figure(figsize=(48, 12))
@@ -79,20 +80,20 @@ def plot_function(epoch_weights):
     rank = ret.iloc[:,0].argsort()
     ax = sns.barplot(x=ret.index.strftime('%d-%m'), y=ret.values.reshape(-1), palette=np.array(pal[::-1])[rank])
     ax.text(0.5, 1.0, ttt, horizontalalignment='center', verticalalignment='top', transform=ax.transAxes)
-    plt.savefig(root+'graphs/weekly_returns')
+    plt.savefig(root+'graphs/weekly_returns', bbox_inches='tight', pad_inches=0)
     plt.close()
     ew_df = pd.DataFrame(ew[1:], index = ind, columns =  assets)
     ew_df.to_csv(root+'outputs/portfolio_weights.csv')
     ew_df = ew_df.resample('1D').mean()
     #tr = np.diff(ew.T, axis=1)
-    plt.figure(figsize=(96, 12))
+    plt.figure(figsize=(48, 12))
     ax = sns.heatmap(ew_df.diff().T, cmap=cmap, center=0, robust=True, yticklabels=False, xticklabels=False)
     ax.text(0.5, 1.0, ttt, horizontalalignment='center', verticalalignment='top', transform=ax.transAxes)
-    plt.savefig(root+'graphs/transactions')
+    plt.savefig(root+'graphs/transactions', bbox_inches='tight', pad_inches=0)
     plt.close()
     ew_df = ew_df.resample('1D').mean()
     plt.figure(figsize=(48, 12))
     ax = sns.heatmap(ew_df.T, cmap=cmap, center=0, xticklabels=False, robust=True)
     ax.text(0.5, 1.0, ttt, horizontalalignment='center', verticalalignment='top', transform=ax.transAxes)
-    plt.savefig(root+'graphs/portfolio_weights')
+    plt.savefig(root+'graphs/portfolio_weights', bbox_inches='tight', pad_inches=0)
     plt.close()
