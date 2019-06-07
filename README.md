@@ -46,9 +46,9 @@ Value at Risk: -0.75%
 Sortino Ratio w/ Deep Kernel Learning: 9.62x
 
 # Annual Cumulative Return
-![](graphs/annual_return.png)
+![](graphs/cumulative_return.png)
 # Weekly Portfolio Log Return
-![](graphs/weekly_return.png)
+![](graphs/weekly_returns.png)
 # QC Live Trading Results!!!
 ![](graphs/live_trading.png)
 
