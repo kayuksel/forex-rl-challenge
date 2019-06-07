@@ -46,11 +46,11 @@ Value at Risk: -0.75%
 Sortino Ratio w/ Deep Kernel Learning: 9.62x
 
 # Annual Cumulative Return
-![](annual_return.png)
+![](graphs/annual_return.png)
 # Weekly Portfolio Log Return
-![](weekly_return.png)
+![](graphs/weekly_return.png)
 # QC Live Trading Results!!!
-![](live_trading.png)
+![](graphs/live_trading.png)
 
 # How you can get rich out of this?
 If you obtain successful results and you want to use your RL model for live-trading,
