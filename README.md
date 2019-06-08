@@ -87,7 +87,7 @@ Multi-threaded implementation of Augmented Random Search method is also availabl
 
 Run the GPU version and then post-train with the CPU version (ARS) to get best results.
 
-# Bonus: Autoencoder Analysis
+# Bonus: Autoencoder Interpretation
 
 PyTorch implementation of Variational Autoencoder (VAE) provided in the repository
 
