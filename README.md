@@ -86,3 +86,15 @@ are divided across processes. Looking for a person to contribute a TensorFlow ve
 Multi-threaded implementation of Augmented Random Search method is also available!
 
 Run the GPU version and then post-train with the CPU version (ARS) to get best results.
+
+# Bonus: Autoencoder Analysis
+
+PyTorch implementation of Variational Autoencoder (VAE) provided in the repository
+
+demonstrates that features has great ability of capturing the right direction for
+
+the most of the extreme movements of the AUD (left) and NZD (right) assets, which
+
+is the key to the success of the portfolio balancing policy that has been trained.
+
+![](graphs/autoencoder.png
