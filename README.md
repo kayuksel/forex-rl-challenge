@@ -91,10 +91,10 @@ Run the GPU version and then post-train with the CPU version (ARS) to get best r
 
 PyTorch implementation of Variational Autoencoder (VAE) provided in the repository
 
-demonstrates that features has great ability of capturing the right direction for
+demonstrates that features has great ability of capturing the right direction for the
 
-the most of the extreme movements of the AUD (left) and NZD (right) assets, which
+majority of the extreme movements of the AUD (left) and NZD (right) assets, which
 
 is the key to the success of the portfolio balancing policy that has been trained.
 
-![](graphs/autoencoder.png
+![](graphs/autoencoder.png)
