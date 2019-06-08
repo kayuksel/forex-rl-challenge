@@ -44,7 +44,10 @@ Tail Ratio: 2.78x
 Value at Risk: -0.75%
 
 Sortino Ratio w/ Deep Kernel Learning: 9.62x
-
+# Daily Portfolio Balances
+![](graphs/portfolio_weights.png)
+# Daily Portfolio Transactions
+![](graphs/transactions.png)
 # Annual Cumulative Return
 ![](graphs/cumulative_return.png)
 # Weekly Portfolio Log Return
