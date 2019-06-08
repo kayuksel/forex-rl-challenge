@@ -95,6 +95,6 @@ demonstrates that features has great ability of capturing the right direction fo
 
 majority of the extreme movements of the AUD (left) and NZD (right) assets, which
 
-is the key to the success of the portfolio balancing policy that has been trained.
+is the key to the success of the portfolio balancing policy that has been converged.
 
 ![](graphs/autoencoder.png)
