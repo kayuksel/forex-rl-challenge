@@ -93,8 +93,9 @@ best_reward = 1.0
 if __name__ == '__main__':
     # A simple linear layer is employed as an example model for you
     model = nn.Linear(No_Features + No_Channels, No_Channels+1, bias = False).cuda().share_memory()
+
     # Define the optimizer that will be utilized by all processes
-    optimizer = AdamW(params = model.parameters(), lr = 1e-3,
+    optimizer = AdamW(params = model.parameters(), lr = 1e-4,
                 eps = 5e-3, weight_decay = 1e-5, partial=2/3)
     for epoch in range(epochs):
         model.train(True)
@@ -113,10 +114,8 @@ if __name__ == '__main__':
 
         if test_reward > best_reward: continue
         best_reward = test_reward
-
         lin_weights = model.weight.data.detach().cpu().numpy()
         with open(root+'models/weights.pkl', 'wb') as f:
             cPickle.dump(lin_weights, f)
-
         # Save best model for participating into the competition
         torch.save(model.state_dict(), root+'models/model.pt')

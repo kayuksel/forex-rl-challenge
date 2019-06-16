@@ -18,7 +18,7 @@ from multiprocessing import Process, Queue, JoinableQueue
 import torch.multiprocessing as _mp
 mp = _mp.get_context('spawn')
 
-os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+os.environ["CUDA_VISIBLE_DEVICES"] = '2'
 torch.manual_seed(0)
 torch.cuda.manual_seed(0)
 torch.backends.cudnn.deterministic = True
@@ -45,8 +45,7 @@ y_train = torch.from_numpy(y_train)
 y_test = torch.from_numpy(y_test)
 with open(root+'dataset/X_train.pkl', 'rb') as f: X_train = cPickle.load(f)
 with open(root+'dataset/X_test.pkl', 'rb') as f: X_test = cPickle.load(f)
-X_train = X_train[:, :-3]
-X_test = X_test[:, :-3]
+
 train_dataset = torch.utils.data.TensorDataset(X_train, y_train)
 test_dataset = torch.utils.data.TensorDataset(X_test, y_test)
 train_loader = torch.utils.data.DataLoader(train_dataset, 
@@ -87,7 +86,7 @@ def plot_function(epoch_weights):
     ew_df = ew_df.resample('1D').mean()
     #tr = np.diff(ew.T, axis=1)
     plt.figure(figsize=(48, 12))
-    ax = sns.heatmap(ew_df.diff().T, cmap=cmap, center=0, robust=True, yticklabels=False, xticklabels=False)
+    ax = sns.heatmap(ew_df.diff().T, cmap=cmap, center=0, robust=True, xticklabels=False)
     ax.text(0.5, 1.0, ttt, horizontalalignment='center', verticalalignment='top', transform=ax.transAxes)
     plt.savefig(root+'graphs/transactions', bbox_inches='tight', pad_inches=0)
     plt.close()
