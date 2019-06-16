@@ -44,7 +44,8 @@ Tail Ratio: 2.78x
 Value at Risk: -0.75%
 
 Sortino Ratio w/ Deep Kernel Learning: 9.62x
-
+# Daily Portfolio Balances
+![](graphs/portfolio_weights.png)
 # Annual Cumulative Return
 ![](graphs/cumulative_return.png)
 # Weekly Portfolio Log Return
@@ -82,4 +83,18 @@ PyTorch implementation of Multi-processed training of a shared model where batch
 
 are divided across processes. Looking for a person to contribute a TensorFlow version.
 
-Multi-threaded implemenation of Augmented Random Search method is also available!
+Multi-threaded implementation of Augmented Random Search method is also available!
+
+Run the GPU version and then post-train with the CPU version (ARS) to get best results.
+
+# Bonus: Autoencoder Interpretation
+
+PyTorch implementation of Variational Autoencoder (VAE) provided in the repository
+
+demonstrates that features has great ability of capturing the right direction for the
+
+majority of the extreme movements of the AUD (left) and NZD (right) assets, which
+
+is the key to the success of the portfolio balancing policy that has been converged.
+
+![](graphs/autoencoder.png)
