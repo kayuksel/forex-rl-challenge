@@ -95,8 +95,8 @@ if __name__ == '__main__':
     model = nn.Linear(No_Features + No_Channels, No_Channels+1, bias = False).cuda().share_memory()
 
     # Define the optimizer that will be utilized by all processes
-    optimizer = AdamW(params = model.parameters(), lr = 1e-4,
-                eps = 5e-3, weight_decay = 1e-5, partial=2/3)
+    optimizer = AdamW(params = model.parameters(), lr = 1e-3,
+    eps = 5e-3, weight_decay = 1e-5, hypergrad = 1e-3, partial = 2/3)
     for epoch in range(epochs):
         model.train(True)
         # For each epoch start all of the processes to update model

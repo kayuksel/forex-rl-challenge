@@ -8,7 +8,8 @@ No_Channels = len(assets)
 No_Features = 512 + No_Channels
 # No. processes, reduce this if it doesnt fit to your GPU!!!
 No_Proccess = 1
-epochs = 1000
+epochs = 50
+
 # Transaction cost that is utilized for commission expenses
 cost = 0.0004
 # Function for calculating risk-measures and plotting results
