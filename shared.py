@@ -18,7 +18,7 @@ from multiprocessing import Process, Queue, JoinableQueue
 import torch.multiprocessing as _mp
 mp = _mp.get_context('spawn')
 
-os.environ["CUDA_VISIBLE_DEVICES"] = '2'
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 torch.manual_seed(0)
 torch.cuda.manual_seed(0)
 torch.backends.cudnn.deterministic = True
