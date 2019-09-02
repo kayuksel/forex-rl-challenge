@@ -23,8 +23,6 @@ with open(root+'dataset/y_train.pkl', 'rb') as f: y_train = cPickle.load(f)
 with open(root+'dataset/y_test.pkl', 'rb') as f: y_test = cPickle.load(f)
 with open(root+'dataset/X_train.pkl', 'rb') as f: X_train = cPickle.load(f)
 with open(root+'dataset/X_test.pkl', 'rb') as f: X_test = cPickle.load(f)
-#X_train = X_train[:, :-3]
-#X_test = X_test[:, :-3]
 train_dataset = torch.utils.data.TensorDataset(X_train)
 train_loader = torch.utils.data.DataLoader(train_dataset,
     batch_size = len(train_dataset), shuffle = True)
