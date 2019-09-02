@@ -27,8 +27,7 @@ aud = y_test[:, 0]
 nzd = y_test[:, 3]
 aud -= np.mean(aud)
 nzd -= np.mean(nzd)
-X_train = X_train[:, :-3]
-X_test = X_test[:, :-3]
+
 y_train = y_train[:,0]+y_train[:,3]
 y_train = torch.from_numpy(y_train)
 y_test = torch.from_numpy(y_test)
