@@ -21,29 +21,16 @@ I will list results from challengers here by sorting them using the industry-sta
 
 risk measures including (but not limited to) the Calmar, Sortino, Omega ratio(s), etc.
 
-# Test results of example.py available here:
-Max. Drawdown: 2.81% 
-Sortino Ratio: 6.91x
+# Test results of example_cpu.py available here:
+Max. Drawdown: 7.74% 
+Sortino Ratio: 9.30x
 
-Sharpe Ratio: 2.62x 
-Stability: 93.31% 
+Sharpe Ratio: 3.35x 
+Stability: 90.31% 
 
-Tail Ratio: 1.85x 
-Value at Risk: -0.55%
+Tail Ratio: 3.67x 
+Value at Risk: -0.94%
 
-Sortino Ratio w/ ARS Post-Training: 8.22x
-
-# Test results that I have obtained myself:
-Max. Drawdown: 4.94% 
-Sortino Ratio: 8.72x
-
-Sharpe Ratio: 3.10x 
-Stability: 94.78% 
-
-Tail Ratio: 2.78x 
-Value at Risk: -0.75%
-
-Sortino Ratio w/ Deep Kernel Learning: 9.62x
 # Daily Portfolio Balances
 ![](graphs/portfolio_weights.png)
 # Annual Cumulative Return
