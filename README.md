@@ -37,8 +37,6 @@ Value at Risk: -0.94%
 ![](graphs/cumulative_return.png)
 # Weekly Portfolio Log Return
 ![](graphs/weekly_returns.png)
-# QC Live Trading Results!!!
-![](graphs/live_trading.png)
 
 # How you can get rich out of this?
 If you obtain successful results and you want to use your RL model for live-trading,
