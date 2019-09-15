@@ -1,7 +1,3 @@
-
-# Check Stock RL Challenge Repository
-Check also the one for the stock-market: https://github.com/kayuksel/stock-rl-challenge
-
 # FX Reinforcement Learning Playground
 
 This repository contains an open challenge for a Portfolio Balancing AI in Forex.
